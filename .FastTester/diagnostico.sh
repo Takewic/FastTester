@@ -3,7 +3,7 @@ voltar1(){ read -p "Pressione [enter] para ir ao menu de diagnostico" ; . /usr/s
 }
 usb(){ clear ; echo "Lista dos dispositivos USB" ; lsusb ;  voltar1 ; }
 pci(){ clear ; echo "Lista dos dispositivos PCI" ; lspci ; voltar1 ; }
-cpu(){ clear ; echo "Informações sobre o processador" ; head 19 /proc/cpuinfo ; voltar1 ; }
+cpu(){ clear ; echo "Informações sobre o processador" ; head -19 /proc/cpuinfo ; voltar1 ; }
 ram(){ clear ; echo "Informações sobre memória RAM" ; free -m ; echo ; voltar1 ;}
 hd(){ clear ; echo "Informações sobre o Hard Disk (HD)" ; df -h ; voltar1 ;}
 placa(){ clear ; echo "Informações sobre a placa mãe" ; lshw -class system ; voltar1 ; }

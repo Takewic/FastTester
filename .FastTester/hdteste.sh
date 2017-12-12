@@ -1,5 +1,8 @@
 #!/bin/bash
-sair(){ exit 1 ; clear ; }
+sair(){
+exit 0 & 
+clear 
+}
 esc(){
 	escolha=$(for x in $(fdisk -l 2> /dev/null | grep 'Disk /dev' | cut -d" " -f2 | cut -b1-8) ; do
  echo $x' "-"' ; done)
@@ -43,7 +46,7 @@ voltar1(){
 		1) veloo ;;
 		2) leitu ;;
 		3) /usr/share/takewic/menu.sh  ;;
-		4) killall takewic ;;
+		4) sair ;;
 esac
 
 clear

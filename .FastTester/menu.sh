@@ -5,7 +5,11 @@ cpu(){ . /usr/share/takewic/cpu.sh ; }
 hd(){ . /usr/share/takewic/hdteste.sh ; }
 diagnostico(){ . /usr/share/takewic/diagnostico.sh ; }
 internet(){ . /usr/share/takewic/internet.sh ; }
-sair(){ exit 0 & ; clear ; echo "Obrigado por utilizar o programa Takewic fast tester." ; }
+sair(){ 
+exit 0 & 
+clear
+echo "Obrigado por utilizar o programa Takewic fast tester." 
+}
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
 	dialog --stdout \
@@ -36,4 +40,7 @@ esac
 
 
 
+# Mensagem final :)
+clear
+echo "Obrigado por utilizar o programa Takewic fast tester."
 

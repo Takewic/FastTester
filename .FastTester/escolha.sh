@@ -7,7 +7,10 @@ dez(){ clear ; memtester 15000 ; parar ; }
 trinta(){ clear ; memtester 30000 ; parar ;}
 parar(){ read -p "Pressione [enter] para voltar para o menu 'teste de Memória Ram'" ; . /usr/share/takewic/testememoria.sh ; }
 voltar(){ . /usr/share/takewic/testememoria.sh ; }
-
+sair(){
+exit 0 &
+clear
+}
 
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
@@ -22,6 +25,7 @@ dialog --stdout \
 5 '15200MB 16(GB)' \
 6 '30000MB 32(GB)' \
 7 'Voltar' \
+8 'Sair' \
 )
 
 # Ela apertou CANCELAR ou ESC, então vamos sair...
