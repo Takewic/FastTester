@@ -9,20 +9,20 @@ esc(){
 	var=$(dialog --stdout --menu "Escolha uma opção:" 0 0 0 $escolha)
 
 }
-veloo(){ esc ; clear ; echo ; echo "Teste de velocidade do Hard Disk (HD)" 
+veloo(){ esc ; clear ; echo ; echo "Teste de velocidade de leitura do HD" 
 	echo 
 	hdparm -tT $var 
 	read -p "Pressione [enter] para voltar ao menu" 
 	voltar1 
 }
-leitu(){ 
-	esc 
+escrita(){  
 	clear
 	echo
-	echo "Teste de leitura do Hard Disk (HD)"
+	echo "Teste de velocidade de escrita do HD"
 	echo
-	hdparm -t --offset 250 $var
+	dd bs=16k count=102400 oflag=direct if=/dev/zero of=arquivo_teste 
 	read -p "Pressione [enter] para voltar ao menu"
+	rm arquivo_teste
 	voltar1
 }
 voltar(){ 
@@ -36,15 +36,15 @@ voltar1(){
 	--title 'Teste de Hard Disk (HD)' 	\
 	--menu 'Escolha uma das opções:' 	\
 	0 0 0 					\
-	1 "Teste de velocidade" 		\
-	2 "Teste de leitura" 			\
+	1 "Teste de leitura" 		\
+	2 "Teste de escrita" 			\
 	3 "Voltar ao menu"			\
 	4 'Sair'
 )
 	[ $? -ne 0 ] && break
 	case $rep in
 		1) veloo ;;
-		2) leitu ;;
+		2) escrita ;;
 		3) /usr/share/takewic/menu.sh  ;;
 		4) sair ;;
 esac
