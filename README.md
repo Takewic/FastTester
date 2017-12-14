@@ -1,13 +1,13 @@
                         Instalação                                                             
  1- Acesse o diretório onde foi feito o download do programa.		   
- 2- Execulte o script "install.sh". $ bash install.sh                     
+ 2- Execute o script "install.sh". $ bash install.sh                     
  3- Espere terminar a instalação do programa.                             
  4- Após a instalação execute o comando "takewic".                        
  5- Pronto, o programa Takewic fast tester está pronto para o uso!
         
                          Remoção	                                   
  1- Acesse o local onde foi feito o download do programa.		   
- 2- Execulte o script "remove.sh".	
+ 2- Execute o script "remove.sh".	
 
  3- Pronto, todos os arquivos instalados serão removidos.
 
@@ -54,7 +54,7 @@ testar.
  
   Qualquer dúvida ou informações entre em contato conosco:       
   Email: takewick@gmail.com                                                
-  Site:                                                             
+                                                           
   Desenvolvedores do programa:                                  
    
    Willian Pilar                                                           
