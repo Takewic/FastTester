@@ -16,7 +16,7 @@ voltar(){ read -p "Pressione [enter] para voltar ao menu 'Teste de CPU'" ; . /us
 sair(){ exit 0 ; clear ; }
 resposta=$(
 dialog --stdout \
---title 'Diagnostico de Hardware' \
+--title 'Teste de CPU' \
 --menu 'Escolha uma das opções' \
 0 0 10 \
 1 "Teste de stress da CPU" \
